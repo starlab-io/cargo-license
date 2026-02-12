@@ -64,7 +64,7 @@ impl LicenseTree<'_> {
                     v.normalize();
                 }
                 nodes.retain_mut(|v| {
-                    if let Self::Or(ref mut v) = v {
+                    if let Self::Or(v) = v {
                         acc.append(v);
                         false
                     } else {
@@ -80,7 +80,7 @@ impl LicenseTree<'_> {
                     v.normalize();
                 }
                 nodes.retain_mut(|v| {
-                    if let Self::And(ref mut v) = v {
+                    if let Self::And(v) = v {
                         acc.append(v);
                         false
                     } else {
@@ -198,7 +198,7 @@ pub fn normalize(license_string: &str) -> String {
         }
     }
 
-    let [ref mut tree] = &mut *req_stack else {
+    let [tree] = &mut *req_stack else {
         return license_string.into();
     };
 

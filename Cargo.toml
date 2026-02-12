@@ -2,11 +2,11 @@
 name = "cargo-license"
 description = "Cargo subcommand to see license of dependencies"
 authors = ["Onur Aslan <onur@onur.im>"]
-version = "0.7.0"
+version = "0.7.1"
 license = "MIT"
 readme = "README.md"
 repository = "https://github.com/onur/cargo-license"
-edition = "2021"
+edition = "2024"
 rust-version = "1.86"
 
 [dependencies]
